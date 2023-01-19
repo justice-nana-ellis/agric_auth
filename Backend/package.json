@@ -2,7 +2,7 @@
   "name": "agric-auth",
   "version": "1.0.0",
   "description": "Agric-auth",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server",
     "dev": "nodemon server"

@@ -2,21 +2,10 @@ require('dotenv').config();
 const bcrypt = require('bcrypt');
 const db = require('../config/db');
 const User = require('../models/userModel');
+const verifyToken = require('../')
 const jwt = require('jsonwebtoken');
 
-const SECRET_KEY = "nanatetragramatonages";
-
-const verifyUserToken =  async(token)=> {
-    const user =  await jwt.verify(
-         token,
-         SECRET_KEY,
-         (err, decoded) => {
-             if (err) return  Promise.reject(err);
-             if (err) return  Promise.resolve(decoded);
-         }
-     );
-     return user;
- }
+const SECRET_KEY = process.env.SECRET_KEY;
 
 const registerUser = async (req, res) => {
 
