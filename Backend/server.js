@@ -13,8 +13,7 @@ app.use(express.json());
 //serve static files
 app.use('/', express.static(path.join(__dirname, '/public')));
 
-
-app.use('/api/v1/users', userRoutes);
+app.use('/api/auth', userRoutes);
 
 // app.all('*', (req, res) => {
 //     res.status(404).json({ "message": "⚠ 404 Not Found" });
